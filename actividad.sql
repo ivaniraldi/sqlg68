@@ -5,7 +5,8 @@ CREATE DATABASE prueba1;
 
 CREATE TABLE estudiantes(
     nombres varchar(50),
-    notas INTEGER
+    notas INTEGER,
+    asistencias SMALLINT
 );
 
 \dt
@@ -20,12 +21,12 @@ ALTER TABLE estudiantes DROP COLUMN apellido;
 \d estudiantes
 
 --insertamos datos en la tabla
-INSERT INTO estudiantes (nombres, notas) VALUES 
-('Juan', 10),
-('Pedro', 9),
-('Carlos', 8),
-('Luis', 7),
-('Maria', 6);
+INSERT INTO estudiantes (nombres, notas, asistencias) VALUES 
+('Juan', 10, 1),
+('Pedro', 9, 2),
+('Carlos', 8, 3),
+('Luis', 7, 4),
+('Maria', 6, 5);
 
 SELECT * FROM estudiantes;
 --Paso 11: Ingresa 2 estudiantes sin nota.
